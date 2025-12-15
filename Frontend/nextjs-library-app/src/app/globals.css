@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  /* Educational Theme Colors */
+  --color-primary: #1e40af;
+  /* Deep Royal Blue */
+  --color-secondary: #fcd34d;
+  /* Amber/Gold for accents */
+  --color-background: #f8fafc;
+  /* Slate 50 (Paper White) */
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  /* Slate 900 */
+  --color-text-muted: #64748b;
+  /* Slate 500 */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-serif: 'Merriweather', serif;
+  /* Good for headers */
+}
+
+@theme {
+  --color-library-blue: var(--color-primary);
+  --color-library-gold: var(--color-secondary);
+  --color-paper: var(--color-background);
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-serif);
+  color: #1e3a8a;
+  /* Darker Blue */
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
