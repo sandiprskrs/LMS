@@ -37,7 +37,7 @@ export default function LoginPage() {
     return (
         <div className="min-h-screen flex items-center justify-center bg-gray-100 px-4">
             <div className="max-w-md w-full bg-white rounded-lg shadow-lg p-8">
-                <h2 className="text-2xl font-bold text-center mb-6 text-gray-900">Sign In to LBS</h2>
+                <h2 className="text-2xl font-bold text-center mb-6 text-gray-900">Sign In to LMS</h2>
 
                 {error && (
                     <div className="bg-red-50 text-red-600 p-3 rounded-md text-sm mb-4 text-center">

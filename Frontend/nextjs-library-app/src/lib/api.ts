@@ -1,4 +1,5 @@
-const API_BASE_URL = 'http://localhost:5211/api'; // Updated to match running backend port
+const API_BASE_URL = 'http://localhost:5211/
+'; // Updated to match running backend port
 
 export const api = {
     get: async (endpoint: string) => {
