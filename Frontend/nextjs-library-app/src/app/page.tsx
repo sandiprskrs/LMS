@@ -9,7 +9,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex justify-between items-center">
           <div className="flex items-center gap-2 font-bold text-xl text-blue-600">
             <BookOpen className="w-6 h-6" />
-            <span>LBS<span className="text-gray-900">v2</span></span>
+            <span>LMS<span className="text-gray-900">v2</span></span>
           </div>
           <div className="flex gap-4">
             <Link href="/login" className="px-4 py-2 text-gray-600 hover:text-blue-600 font-medium">

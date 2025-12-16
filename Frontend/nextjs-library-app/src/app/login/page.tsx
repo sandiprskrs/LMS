@@ -7,7 +7,6 @@ export default function LoginPage() {
     const router = useRouter();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-    const [role, setRole] = useState('User');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
 
@@ -19,15 +18,10 @@ export default function LoginPage() {
         try {
             const data = await api.post('/auth/login', { email, password });
 
-            // Basic Role Validation
-            if (data.role !== role) {
-                setError(`Invalid role selection. This account is registered as ${data.role}.`);
-                setLoading(false);
-                return;
-            }
-
+            // Store user data in localStorage
             localStorage.setItem('user', JSON.stringify(data));
 
+            // Automatically route based on role from backend
             if (data.role === 'Admin') {
                 router.push('/admin/dashboard');
             } else {
@@ -73,17 +67,6 @@ export default function LoginPage() {
                             placeholder="••••••••"
                             required
                         />
-                    </div>
-                    <div>
-                        <label className="block text-sm font-medium text-gray-700">Role</label>
-                        <select
-                            value={role}
-                            onChange={(e) => setRole(e.target.value)}
-                            className="mt-1 w-full border border-gray-300 rounded-md px-4 py-2 focus:ring-2 focus:ring-blue-500 outline-none text-gray-900 bg-white"
-                        >
-                            <option value="User">User</option>
-                            <option value="Admin">Admin</option>
-                        </select>
                     </div>
                     <button
                         type="submit"

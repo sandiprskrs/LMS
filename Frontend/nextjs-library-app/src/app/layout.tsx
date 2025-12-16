@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Merriweather } from "next/font/google";
 import "./globals.css";
+import BackButton from "@/components/BackButton";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-sans' });
 const merriweather = Merriweather({ weight: ['300', '400', '700', '900'], subsets: ["latin"], variable: '--font-serif' });
@@ -17,7 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${merriweather.variable} font-sans antialiased`}>{children}</body>
+      <body className={`${inter.variable} ${merriweather.variable} font-sans antialiased`}>
+        {children}
+        <BackButton />
+      </body>
     </html>
   );
 }
